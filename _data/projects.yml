@@ -1,0 +1,29 @@
+- name: "Mobile Money ↔ Lightning On/Off Ramp"
+  stack: "Backend orchestration, Mobile Money PSPs, Lightning, ledgers"
+  period: "Flash · 2025"
+  impact: "Local-currency to Lightning settlement in under five seconds, with a zero-failed-transaction operating record on the exchange path."
+  description: "State machine for deposit, conversion, spend, and withdraw across Mobile Money and Lightning. Partner latency is treated as a first-class failure mode, not an exception."
+  links: []
+
+- name: "USD ACH into a Bitcoin Wallet"
+  stack: "ACH, bank adapters, Stablesats / Flash Cash, Lightning addresses"
+  period: "Flash · 2026"
+  impact: "Freelancers can receive a USD wire into a bank account that converts to spendable dollar-stable value, payable to any Lightning address."
+  description: "Backend for inbound international bank transfer, conversion, and global Lightning spend. The hard part is settlement truth across bank cutoffs and Lightning immediacy."
+  links: []
+
+- name: "Partner Reconciliation and Runbooks"
+  stack: "CLI, crons, monitoring dashboard, append-only ledger diffs"
+  period: "Flash · 2026"
+  impact: "Operators can continue when partners are slow: explicit runbooks, retries, and ledger-vs-processor diffs instead of silent stuck states."
+  description: "Reconciliation jobs and dashboards for cash-out, top-up, and settle. Designed for the case where the processor, the wallet, and the bank statement disagree."
+  links: []
+
+- name: "Breezee — Lightning infrastructure for African builders"
+  stack: "Breez SDK, Lightning, open-source developer infrastructure"
+  period: "Breezee · 2025 - 2026"
+  impact: "Builders in Benin and Senegal shipped wallets and payments on infra.usebreezee.xyz during hackathons; the stack was open-sourced so others can fork the plumbing."
+  description: "Strip the friction of wiring Bitcoin/Lightning into a product: less boilerplate, fewer edge cases, more time shipping. Listed on the African Bitcoin Ecosystem Map."
+  links:
+    - label: "usebreezee.xyz"
+      url: "https://usebreezee.xyz"

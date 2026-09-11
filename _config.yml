@@ -1,0 +1,17 @@
+title: "AFOUDA Abdias — Fintech and Bitcoin Architecture"
+description: "Software & data engineering at Flash. Bitcoin under-the-hood mechanics, fintech rails, and the mathematics behind LLMs."
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: null
+permalink: pretty
+
+collections:
+  projects:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

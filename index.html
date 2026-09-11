@@ -1,0 +1,139 @@
+---
+title: "Olaniran AFOUDA"
+lang: en
+---
+
+{% assign profile = site.data.profile %}
+
+<section class="header">
+  <h1>{{ profile.name }}</h1>
+  <p class="muted">{{ profile.role }}</p>
+  <p>{{ profile.tagline }}</p>
+  <div class="contact">
+    <span>{{ profile.location }}</span>
+    {% if profile.email and profile.email != "" and profile.email != "you@example.com" %}
+      {% capture email_href %}mailto:{{ profile.email }}{% endcapture %}
+      {% include favicon_link.html url=email_href label=profile.email %}
+    {% endif %}
+    {% if profile.github and profile.github != "" and profile.github != "https://github.com/your-handle" %}
+      {% include favicon_link.html url=profile.github label="GitHub" %}
+    {% endif %}
+    {% include favicon_link.html url=profile.linkedin label="LinkedIn" %}
+    {% if profile.x_twitter and profile.x_twitter != "" %}
+      {% include favicon_link.html url=profile.x_twitter label="X (Twitter)" %}
+    {% endif %}
+    {% if profile.website and profile.website != "" %}
+      {% include favicon_link.html url=profile.website label="Website" %}
+    {% endif %}
+  </div>
+</section>
+
+<section>
+  <h2>Profile</h2>
+  <p>{{ profile.about }}</p>
+</section>
+
+<section>
+  <h2>Interests</h2>
+  <ul>
+    {% for interest in profile.interests %}
+      <li>{{ interest }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Failure Modes I Prevent</h2>
+  <ul>
+    {% for point in profile.security_focus %}
+      <li>{{ point }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Background</h2>
+  <p class="muted">{{ profile.companies_intro }}</p>
+  <div class="work-list">
+    {% for job in profile.companies %}
+      <article class="work-item">
+        <h3 class="work-heading">
+          {% if job.links and job.links.first.url %}
+            {% include favicon.html url=job.links.first.url %}
+          {% endif %}
+          {{ job.company }}
+        </h3>
+        <p class="meta">{{ job.role }} | {{ job.period }}</p>
+        <p>{{ job.summary }}</p>
+        {% if job.links and job.links.size > 0 %}
+          <p class="meta">
+            {% for link in job.links %}
+              {% include favicon_link.html url=link.url label=link.label %}{% unless forloop.last %} · {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Selected Work</h2>
+  <div class="work-list">
+    {% for project in site.data.projects %}
+      <article class="work-item">
+        <h3>{{ project.name }}</h3>
+        <p class="meta">{{ project.period }} - {{ project.stack }}</p>
+        <p><strong>Impact:</strong> {{ project.impact }}</p>
+        <p>{{ project.description }}</p>
+        {% if project.links and project.links.size > 0 %}
+          <p class="meta">
+            {% for link in project.links %}
+              {% include favicon_link.html url=link.url label=link.label %}{% unless forloop.last %} - {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Notes</h2>
+  <ul class="post-list">
+    {% assign en_posts = site.posts | where: "lang", "en" %}
+    {% for post in en_posts limit:3 %}
+      <li class="post-item">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.tags and post.tags.size > 0 %} - {{ post.tags | join: ", " }}{% endif %}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ '/blog/' | relative_url }}">Read all notes</a></p>
+</section>
+
+<section>
+  <h2>Communities</h2>
+  <div class="cards">
+    {% for community in profile.communities %}
+      <article class="card">
+        <h3>{{ community.name }}</h3>
+        <p class="meta">{{ community.role }} | {{ community.period }}</p>
+        <p>{{ community.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="cards">
+    {% for item in profile.education %}
+      <article class="card">
+        <h3>{{ item.school }}</h3>
+        <p class="meta">{{ item.degree }} | {{ item.period }}</p>
+        <p>{{ item.notes }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

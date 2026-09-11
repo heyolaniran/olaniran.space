@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="theme-color" content="#1f4b99" />
+    <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ '/assets/favicon.png' | relative_url }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
+      })();
+    </script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="top-nav">
+        {% assign current_lang = page.lang | default: "en" %}
+        {% if current_lang == "fr" %}
+          <a href="{{ '/fr/' | relative_url }}">Accueil</a>
+          <a href="{{ '/fr/blog/' | relative_url }}">Notes</a>
+          <a href="{{ '/' | relative_url }}">EN</a>
+        {% else %}
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/blog/' | relative_url }}">Notes</a>
+          <a href="{{ '/fr/' | relative_url }}">FR</a>
+        {% endif %}
+      </nav>
+      <nav class="theme-nav" aria-label="Theme switcher">
+        <button class="theme-button" type="button" id="theme-toggle">
+          {% if current_lang == "fr" %}Mode Sombre{% else %}Dark Mode{% endif %}
+        </button>
+      </nav>
+      {{ content }}
+    </main>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.getElementById("theme-toggle");
+        if (!toggle) return;
+
+        function updateLabel() {
+          var isDark = root.getAttribute("data-theme") === "dark";
+          var isFrench = root.getAttribute("lang") === "fr";
+          if (isFrench) {
+            toggle.textContent = isDark ? "Mode Clair" : "Mode Sombre";
+          } else {
+            toggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+          }
+          toggle.classList.toggle("is-active", isDark);
+        }
+
+        updateLabel();
+
+        toggle.addEventListener("click", function () {
+          var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          updateLabel();
+        });
+      })();
+    </script>
+  </body>
+</html>

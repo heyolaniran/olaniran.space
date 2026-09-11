@@ -1,0 +1,4 @@
+{%- if include.url and include.url != "" -%}
+{%- assign host = include.url | replace: "https://", "" | replace: "http://", "" | split: "/" | first | replace: "www.", "" -%}
+<img class="favicon" src="https://icons.duckduckgo.com/ip3/{{ host }}.ico" alt="" width="16" height="16" />
+{%- endif -%}

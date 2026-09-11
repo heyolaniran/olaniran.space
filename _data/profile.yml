@@ -1,0 +1,76 @@
+name: "Olaniran AFOUDA"
+role: "Software & Data Engineering @ Flash · Bitcoin under-the-hood mechanics & fintech"
+location: "Abomey-Calavi, Benin"
+email: "olaniranlaurent@gmail.com"
+github: "https://github.com/heyolaniran"
+linkedin: "https://www.linkedin.com/in/abdias-afouda-06461022a"
+x_twitter: "https://x.com/heyolaniran"
+tagline: "I design money-movement systems: on/off ramps, Lightning settlement, ledgers, and the failure modes that appear when rails disagree."
+about: "Backend and systems engineer at Flash, working at the intersection of fintech and Bitcoin infrastructure. The default problem is orchestration: converting local money into Bitcoin (and back), reconciling partners who are slow or silent, and keeping a ledger true when banks, Mobile Money, and Lightning nodes disagree. Earlier I built payment and ERP systems in West Africa, so regulation, payroll data, and operator runbooks are architecture constraints, not afterthoughts. Adjacent to the job: the mathematics behind LLMs and modern AI — probability, optimization, and representation — because those tools will sit next to money systems whether we like it or not."
+
+interests:
+  - "Payments orchestration: on-ramps, off-ramps, PSP adapters, and settlement state machines"
+  - "Bitcoin and Lightning architecture: UTXO, channels, routing, confirmation risk, wallet ops"
+  - "Double-entry ledgers, reconciliation, and asset provisioning under partner latency"
+  - "Compliance as schema: KYC fields, screening, FATF travel-rule data, and audit trails"
+  - "Mathematics of LLMs and AI: linear algebra, information theory, optimization, and probabilistic inference"
+
+security_focus:
+  - "Idempotent money movement so retries never double-credit or double-debit"
+  - "Explicit payment state machines across bank, Mobile Money, and Lightning rails"
+  - "Hot-wallet policy, confirmation depth, and partner timeout runbooks"
+  - "Reconciliation when the processor, the chain, and the internal ledger disagree"
+
+companies_intro: "Most relevant roles for fintech and Bitcoin architecture — not a full CV."
+companies:
+  - company: "Flash"
+    role: "Backend & System Engineer"
+    period: "Oct 2025 - Present"
+    summary: "Bitcoin/local-currency exchange, Mobile Money to Lightning on/off-ramp in under five seconds, data tracking, automated asset management, and continuous provisioning from live transaction metrics. Architecture reviews aimed at surviving unreliable external providers. Zero failed transactions on the exchange path."
+    links:
+      - label: "bitcoinflash.xyz"
+        url: "https://bitcoinflash.xyz"
+  - company: "Flash (getflash.io)"
+    role: "Backend Engineer"
+    period: "Apr 2026 - Aug 2026"
+    summary: "Opinionated Bitcoin wallet for the Caribbean. Cash-out notifications for Jamaican users, bank top-up and settle into Bitcoin / Flash Cash, ACH inbound for freelancers, plus CLI/cron runbooks and reconciliation when partners are slow."
+    links:
+      - label: "getflash.io"
+        url: "https://getflash.io"
+  - company: "Plan ₿ Network"
+    role: "OSC Technical Writer"
+    period: "May 2025 - Jan 2026"
+    summary: "30+ documentation pieces on Bitcoin tools, privacy, on-chain, Lightning, miners, and nodes. Growth training: protocol as infrastructure, not slogans."
+    links:
+      - label: "planb.network"
+        url: "https://planb.network"
+  - company: "Chaincode Labs"
+    role: "Bitcoin Open Source Software Development"
+    period: "Jan 2025 - Apr 2025"
+    summary: "Bitcoin under-the-hood mechanics: CLI extraction, key derivation, Python wallet, UTXO, spend paths, miner candidate blocks. Lightning: channel CLI, connections, multi-hop payments, route construction. Later: LDK-Node Python binding tests and Lightning offensive heuristics."
+    links:
+      - label: "chaincode.com"
+        url: "https://chaincode.com"
+  - company: "ROOTS TECHNOLOGIES"
+    role: "Full-stack Developer & ERP Integrator"
+    period: "Aug 2023 - Jan 2025"
+    summary: "Odoo modules, payroll, and reporting for Benin and Togo under local regulation. Relevant because money systems inherit HR, tax, and audit data long before a payment is clicked."
+    links:
+      - label: "LinkedIn"
+        url: "https://www.linkedin.com/company/zen-roots-technologies"
+
+education:
+  - school: "Chaincode Labs"
+    degree: "Bitcoin Open Source Software Development"
+    period: "Jan 2025 - Apr 2025"
+    notes: "Bitcoin under-the-hood mechanics: CLI, key derivation, Python wallet, UTXO, spend paths, miner candidate blocks. Lightning: channel CLI, multi-hop payments, route construction. Later: LDK-Node Python binding tests and Lightning offensive heuristics."
+
+communities:
+  - name: "Bitdevs Cotonou"
+    role: "Organizer"
+    period: "2024 - Present"
+    summary: "Socratic seminars and workshops on Bitcoin: protocol, tooling, and builder practice in Cotonou."
+  - name: "Lightning Developer Bootcamp"
+    role: "Instructor"
+    period: "2025 - 2026"
+    summary: "Ran the bootcamp in Benin, Burkina Faso, and Burundi. Mission: explain Bitcoin and Lightning mechanisms, then help builders ship solutions on Lightning."

@@ -1,0 +1,9 @@
+{%- assign host = include.url | replace: "https://", "" | replace: "http://", "" | split: "/" | first | replace: "www.", "" -%}
+<a class="favicon-link" href="{{ include.url }}"{% unless include.url contains "mailto:" %} rel="noopener noreferrer"{% endunless %}>
+  {%- if include.url contains "mailto:" -%}
+    <svg class="favicon favicon-svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1.5 3h13a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm.5 1.07V12h12V4.07L8 8.25 2 4.07zM8 7.15 13.2 4H2.8L8 7.15z"/></svg>
+  {%- else -%}
+    <img class="favicon" src="https://icons.duckduckgo.com/ip3/{{ host }}.ico" alt="" width="14" height="14" />
+  {%- endif -%}
+  {{ include.label }}
+</a>

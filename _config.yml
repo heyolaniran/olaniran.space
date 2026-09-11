@@ -1,10 +1,14 @@
-title: "AFOUDA Abdias — Fintech and Bitcoin Architecture"
+title: "Olaniran Afouda — Fintech and Bitcoin Architecture"
 description: "Software & data engineering at Flash. Bitcoin under-the-hood mechanics, fintech rails, and the mathematics behind LLMs."
 baseurl: ""
-url: ""
+url: "https://olaniran.space"
 markdown: kramdown
 theme: null
 permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
 
 collections:
   projects:

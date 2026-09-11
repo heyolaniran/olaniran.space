@@ -1,8 +1,12 @@
 ---
 title: "Notes"
+description: "Lightning seminar notes: HTLC, MAC/HMAC, and routing failures. Written during Lightning Protocol Development."
 permalink: /blog/
 lang: en
+fr_alt: /fr/blog/
 ---
+
+# Notes
 
 Lightning seminar notes: HTLC, MAC/HMAC, and routing failures. Written during Lightning Protocol Development.
 

@@ -1,0 +1,23 @@
+# Olaniran Afouda
+
+> Backend and systems engineer at Flash, building Bitcoin/Lightning infrastructure and fintech payment systems in West Africa and the Caribbean. Works on on/off ramps, payment orchestration, double-entry ledgers, and reconciliation. Writes seminar notes on Lightning protocol internals.
+
+## Pages
+
+- [Home (EN)](https://olaniran.space/): profile, experience, selected work, communities
+- [Accueil (FR)](https://olaniran.space/fr/): version française du profil
+- [Notes (EN)](https://olaniran.space/blog/): Lightning protocol seminar notes
+- [Notes (FR)](https://olaniran.space/fr/blog/): index français des notes
+
+## Notes
+
+- [Hash Timelocked Contract (HTLC)](https://olaniran.space/2025/03/09/hash-timelocked-contract/): how HTLCs make Lightning payments atomic and trustless
+- [Where MAC and HMAC are implemented in the Lightning Protocol — and why](https://olaniran.space/2025/03/12/mac-hmac-in-lightning/): message authentication in Lightning node communications
+- [Causes of routing failures in Lightning Protocol](https://olaniran.space/2025/03/19/lightning-routing-failures/): why multi-hop payments fail and their network impact
+
+## Links
+
+- [GitHub](https://github.com/heyolaniran)
+- [LinkedIn](https://www.linkedin.com/in/abdias-afouda-06461022a)
+- [X (Twitter)](https://x.com/heyolaniran)
+- [RSS feed](https://olaniran.space/feed.xml)

@@ -1,8 +1,12 @@
 ---
 title: "Notes"
+description: "Notes de séminaire Lightning : HTLC, MAC/HMAC et échecs de routage, écrites pendant le Lightning Protocol Development."
 permalink: /fr/blog/
 lang: fr
+en_alt: /blog/
 ---
+
+# Notes
 
 Notes de séminaire Lightning : HTLC, MAC/HMAC et échecs de routage. Écrites pendant le Lightning Protocol Development. (en anglais)
 

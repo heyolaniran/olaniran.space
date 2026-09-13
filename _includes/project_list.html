@@ -1,0 +1,15 @@
+<div class="work-list">
+  {% for project in include.items %}
+    <article class="work-item">
+      <h3>
+        {% if project.links and project.links.first.url %}
+          {% include favicon_link.html url=project.links.first.url label=project.name %}
+        {% else %}
+          {{ project.name }}
+        {% endif %}
+      </h3>
+      <p class="meta">{{ project.company }}</p>
+      <p>{{ project.line }}</p>
+    </article>
+  {% endfor %}
+</div>

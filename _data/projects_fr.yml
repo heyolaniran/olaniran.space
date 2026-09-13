@@ -1,29 +1,55 @@
-- name: "On/Off Ramp Mobile Money ↔ Lightning"
-  stack: "Orchestration backend, PSP Mobile Money, Lightning, ledgers"
-  period: "Flash · 2025"
-  impact: "Passage monnaie locale vers Lightning en moins de cinq secondes, avec un historique d'exploitation sans transaction échouée sur le chemin d'échange."
-  description: "Machine à états pour dépôt, conversion, dépense et retrait entre Mobile Money et Lightning. La latence partenaire est un mode de défaillance de premier ordre, pas une exception."
-  links: []
+- name: "Échange Mobile Money vers Lightning"
+  company: "Flash"
+  period: "2025"
+  line: "Envoyez du Mobile Money au Bénin et voyez-le arriver en sats sur Lightning en quelques secondes. J'ai construit ce chemin d'échange pour qu'un opérateur lent ne perde jamais votre paiement."
+  links:
+    - label: "bitcoinflash.xyz"
+      url: "https://bitcoinflash.xyz"
 
-- name: "ACH USD dans un wallet Bitcoin"
-  stack: "ACH, adaptateurs bancaires, Stablesats / Flash Cash, adresses Lightning"
-  period: "Flash · 2026"
-  impact: "Un freelance peut recevoir un virement USD sur un compte qui se convertit en valeur dollar dépensable, payable vers n'importe quelle adresse Lightning."
-  description: "Backend du virement international entrant, de la conversion, et de la dépense Lightning globale. Le plus dur, c'est la vérité du règlement (settlement) entre les cut-offs bancaires et l'instantanéité de Lightning."
-  links: []
+- name: "Virements US dans un wallet bitcoin"
+  company: "getFlash"
+  period: "2026"
+  line: "Un freelance reçoit un virement bancaire américain et le dépense depuis un wallet bitcoin sur Lightning. J'ai construit la partie réception ACH et recharge bancaire."
+  links:
+    - label: "getflash.io"
+      url: "https://getflash.io"
 
-- name: "Réconciliation partenaires et runbooks"
-  stack: "CLI, crons, tableau de bord de monitoring, diffs de ledger en ajout seul (append-only)"
-  period: "Flash · 2026"
-  impact: "Les opérateurs tiennent quand les partenaires ralentissent : runbooks explicites, nouvelles tentatives (retries), et diffs ledger vs processeur au lieu d'états bloqués silencieux."
-  description: "Tâches (jobs) de réconciliation et tableaux de bord pour cash-out, rechargement (top-up) et règlement (settle). Conçu pour le cas où le processeur, le wallet et le relevé bancaire divergent."
-  links: []
+- name: "Runbooks pour paiements bloqués"
+  company: "getFlash"
+  period: "2026"
+  line: "Quand la banque dit une chose et notre ledger une autre, les opérateurs ont besoin de réponses. J'ai écrit les runbooks et les tâches de réconciliation pour rendre chaque paiement bloqué visible et relançable."
+  links:
+    - label: "getflash.io"
+      url: "https://getflash.io"
 
-- name: "Breezee — infrastructure Lightning pour builders africains"
-  stack: "Breez SDK, Lightning, infrastructure développeur open source"
-  period: "Breezee · 2025 - 2026"
-  impact: "Des builders au Bénin et au Sénégal ont lancé wallets et paiements sur infra.usebreezee.xyz pendant des hackathons ; la stack a été rendue open source."
-  description: "Retirer la friction d'intégrer Bitcoin/Lightning dans un produit : moins de code répétitif (boilerplate), moins de cas limites (edge cases), plus de temps à publier (shipper). Présent sur l'African Bitcoin Ecosystem Map."
+- name: "Ramper"
+  company: "Ramper"
+  period: "2026"
+  line: "Mon projet : payez une facture Lightning et votre famille reçoit du M-Pesa ou du MTN MoMo au Kenya, en Tanzanie ou au Bénin. Il choisit le bon rail, affiche les frais, et explique quoi faire si l'argent se bloque."
   links:
     - label: "usebreezee.xyz"
-      url: "https://usebreezee.xyz"
+      url: "https://www.usebreezee.xyz"
+
+- name: "Test keysend spontané dans LDK-Node"
+  company: "LDK — open source"
+  period: "2026"
+  line: "Mon test accepté en amont : deux nœuds regtest, un keysend avec enregistrement TLV personnalisé, succès du paiement vérifié — pour couvrir les paiements spontanés dans les bindings Python."
+  links:
+    - label: "ldk-node#923"
+      url: "https://github.com/lightningdevkit/ldk-node/pull/923"
+
+- name: "Facture depuis n'importe quelle adresse Lightning"
+  company: "Open source"
+  period: "2025"
+  line: "Collez une adresse Lightning ou un LNURL, obtenez une facture — publié sur npm sous invoice-any avec un CLI get-invoice. Un petit outil qui enlève une étape pénible pour être payé sur Lightning."
+  links:
+    - label: "npm · invoice-any"
+      url: "https://www.npmjs.com/package/invoice-any"
+
+- name: "Bitcoin Script, en pratique"
+  company: "Bitdevs Cotonou"
+  period: "2026"
+  line: "Le matériel Bitcoin Script avec lequel j'enseigne — contrats, timelocks, multisig et transactions à exécuter soi-même."
+  links:
+    - label: "bitdevs-bitcoinscript"
+      url: "https://github.com/heyolaniran/bitdevs-bitcoinscript"

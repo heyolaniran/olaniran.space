@@ -1,0 +1,19 @@
+<div class="work-list">
+  {% for job in include.items %}
+    <article class="work-item">
+      <h3 class="work-heading">
+        {% if job.links and job.links.first.url %}
+          {% include favicon.html url=job.links.first.url %}
+          <a href="{{ job.links.first.url }}" rel="noopener noreferrer">{{ job.company }}</a>
+        {% else %}
+          {{ job.company }}
+        {% endif %}
+        {% if job.current %}
+          <span class="badge">{{ include.badge | default: "Currently here" }}</span>
+        {% endif %}
+      </h3>
+      <p class="meta">{{ job.role }}</p>
+      <p>{{ job.line }}</p>
+    </article>
+  {% endfor %}
+</div>

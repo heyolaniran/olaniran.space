@@ -49,6 +49,16 @@ body {
   font-size: 0.95rem;
 }
 
+.top-nav a {
+  color: var(--muted);
+}
+
+.top-nav a.is-current,
+.top-nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
 .theme-nav {
   display: flex;
   gap: 0.5rem;
@@ -120,6 +130,23 @@ a:hover {
   margin-bottom: 1.75rem;
 }
 
+.one-liner {
+  margin: 0.15rem 0 0;
+  color: var(--text);
+}
+
+.intro {
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  color: var(--muted);
+}
+
+.intro p + p {
+  margin-top: 1rem;
+}
+
 .contact {
   margin-top: 0.75rem;
   display: flex;
@@ -152,6 +179,19 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.05rem 0.55rem;
+  white-space: nowrap;
 }
 
 .work-heading .favicon {

@@ -1,6 +1,6 @@
 ---
-title: "Notes"
-description: "Notes de séminaire Lightning : HTLC, MAC/HMAC et échecs de routage, écrites pendant le Lightning Protocol Development."
+title: "Notes sur Lightning : HTLC, échecs de routage et paiements"
+description: "J'ai appris Lightning en l'expliquant simplement. Notes pratiques du cours Lightning de Chaincode : HTLC, MAC/HMAC et pourquoi les paiements échouent."
 permalink: /fr/blog/
 lang: fr
 en_alt: /blog/
@@ -8,7 +8,7 @@ en_alt: /blog/
 
 # Notes
 
-Notes de séminaire Lightning : HTLC, MAC/HMAC et échecs de routage. Écrites pendant le Lightning Protocol Development. (en anglais)
+J'ai appris Lightning en l'expliquant simplement. Mes notes pratiques du cours Lightning de Chaincode — HTLC, MAC/HMAC et pourquoi les paiements échouent, sans jargon. (en anglais)
 
 <ul class="post-list">
   {% assign fr_posts = site.posts | where: "lang", "en" %}

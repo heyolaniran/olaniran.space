@@ -1,12 +1,12 @@
 name: "Olaniran AFOUDA"
-role: "Ingénieur Logiciel & Data @ Flash"
+role: "Ingénieur backend au Bénin, sur Bitcoin chez Flash."
 location: "Abomey-Calavi, Benin"
 email: "olaniranlaurent@gmail.com"
 github: "https://github.com/heyolaniran"
 linkedin: "https://www.linkedin.com/in/abdias-afouda-06461022a"
 x_twitter: "https://x.com/heyolaniran"
-tagline: "Je conçois des systèmes de mouvement d'argent : on/off ramps, règlement (settlement) Lightning, ledgers, et les modes de défaillance quand les rails se contredisent."
-about: "Actuellement ingénieur backend et systèmes chez Flash, à l'intersection de la fintech et de l'infrastructure Bitcoin. Le problème par défaut est l'orchestration : convertir de la monnaie locale en Bitcoin (et l'inverse), réconcilier des partenaires lents ou silencieux, et tenir un ledger exact quand banques, Mobile Money et nœuds Lightning divergent. Avant cela, systèmes de paiement et d'ERP en Afrique de l'Ouest : régulation, paie et runbooks sont des contraintes d'architecture. En parallèle : j'aime étudier les mathématiques derrière les LLM et l'IA — algèbre, optimisation, inférence — parce que ces outils s'assiéront à côté des systèmes d'argent."
+about: "Je m'appelle Olaniran — je travaille sur le bitcoin que les gens utilisent vraiment. Je relie le cash local et le Mobile Money à Lightning, et je garde les comptes justes quand une banque ou un opérateur ne répond plus."
+now: 'En ce moment je suis chez Flash au Bénin : je transforme du Mobile Money en paiements Lightning en quelques secondes. Avant, j''ai aidé à construire le wallet caraïbéen getFlash — virements US reçus, bitcoin à dépenser, cash-out en Jamaïque. Ancien <a href="https://www.btrust.tech/builders">Btrust Builder</a> — j''anime Bitdevs Cotonou, où on explique aux builders comment Lightning marche vraiment.'
 
 interests:
   - "Lecture - Marc Aurèle, Pythagore, stoïcisme"
@@ -22,40 +22,41 @@ security_focus:
   - "Politique de hot wallet, profondeur de confirmations, runbooks de délais d'attente (timeouts) des partenaires"
   - "Réconciliation quand le processeur, la chaîne et le ledger interne divergent"
 
-companies_intro: "Les rôles les plus pertinents pour la fintech et l'architecture Bitcoin — pas un CV exhaustif."
+companies_intro: "Des équipes avec qui j'ai construit en Afrique de l'Ouest, dans les Caraïbes et dans le bitcoin open source."
 companies:
   - company: "Flash"
     role: "Backend & System Engineer"
     period: "Oct 2025 - Present"
-    summary: "Échange Bitcoin/monnaie locale, on/off-ramp Mobile Money vers Lightning en moins d'une minute, suivi (tracking), gestion d'actifs automatisée, et provisionnement continu à partir des métriques en direct. Revues d'architecture pour survivre à des fournisseurs externes peu fiables. Zéro transaction échouée sur le chemin d'échange."
+    current: true
+    line: "Échange bitcoin en Afrique de l'Ouest — je travaille sur les paiements Mobile Money vers Lightning qui arrivent en quelques secondes."
     links:
       - label: "bitcoinflash.xyz"
         url: "https://bitcoinflash.xyz"
-  - company: "Flash (getflash.io)"
+  - company: "getFlash"
     role: "Backend Engineer"
     period: "Apr 2026 - Aug 2026"
-    summary: "Wallet Bitcoin spécialisé pour les Caraïbes. Notifications de cash-out pour utilisateurs jamaïcains, rechargement (top-up) bancaire vers Bitcoin / Flash Cash, virements ACH entrants pour freelances, plus runbooks CLI/cron et réconciliation quand les partenaires ralentissent."
+    line: "Wallet bitcoin des Caraïbes — j'ai aidé à construire le cash-out en Jamaïque, la recharge bancaire vers bitcoin et les paiements ACH pour les freelances."
     links:
       - label: "getflash.io"
         url: "https://getflash.io"
   - company: "Plan ₿ Network"
     role: "OSC Technical Writer"
     period: "May 2025 - Jan 2026"
-    summary: "Plus de 30 articles de documentation sur les outils Bitcoin, la confidentialité (privacy), l'on-chain, Lightning, mineurs et nœuds. Formation : le protocole comme infrastructure."
+    line: "J'ai écrit plus de 30 guides sur les outils bitcoin, la confidentialité, Lightning, les mineurs et les nœuds."
     links:
       - label: "planb.network"
         url: "https://planb.network"
   - company: "Chaincode Labs"
     role: "Bitcoin Open Source Software Development"
     period: "Jan 2025 - Apr 2025"
-    summary: "Mécanique interne de Bitcoin : CLI, dérivation de clés, wallet Python, UTXO, chemins de dépense, blocs candidats. Lightning : CLI des canaux, connexions, paiements multi-hop, construction de routes. Ensuite : tests des bindings Python LDK-Node et heuristiques offensives Lightning."
+    line: "J'ai appris bitcoin de l'intérieur — wallets, UTXO, canaux et paiements Lightning multi-hop."
     links:
       - label: "chaincode.com"
         url: "https://chaincode.com"
   - company: "ROOTS TECHNOLOGIES"
     role: "Développeur Full-stack & Intégrateur ERP"
     period: "Aug 2023 - Jan 2025"
-    summary: "Modules Odoo, paie et reporting pour le Bénin et le Togo sous régulation locale. Un système d'argent hérite des données RH, fiscales et d'audit bien avant le clic de paiement."
+    line: "Paie et reporting avec Odoo pour des entreprises au Bénin et au Togo, selon les règles fiscales locales."
     links:
       - label: "LinkedIn"
         url: "https://www.linkedin.com/company/zen-roots-technologies"

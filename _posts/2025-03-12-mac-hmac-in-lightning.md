@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Where MAC and HMAC are implemented in the Lightning Protocol — and why"
+title: "How Lightning nodes trust each other: MAC and HMAC, simply explained"
+description: "Where MAC and HMAC live in Lightning — message transport, onion routing, channels — and why they stop attackers from rewriting payments."
 tags: [lightning, seminar, cryptography]
 lang: en
 ---
 
-Here we will discuss the implementation of MAC and HMAC in Lightning node communications and why they are so important.
+If anyone could rewrite messages between Lightning nodes, payments would fall apart. I dug into where MAC and HMAC actually sit in the protocol, and why they matter. Here is the plain-English version.
 
 ## Where are MAC and HMAC implemented in the Lightning Protocol?
 

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Causes of routing failures in Lightning Protocol"
+title: "Why Lightning payments fail — and what happens next"
+description: "Dead channels, low capacity, wrong fees, expired HTLCs: the real reasons Lightning payments fail, with examples from routing a payment."
 tags: [lightning, seminar, routing]
 lang: en
 ---
 
-These notes are about possible causes of payment failures that can occur in the Lightning Protocol.
-Some are more severe than others in terms of their impact on the network's functionality and user experience.
+A Lightning payment can die for boring reasons — a node went offline, a channel ran dry, a fee was too low. I collected the failure modes I kept running into, so you can recognize them faster than I did.
 
 ## Channel disabled
 

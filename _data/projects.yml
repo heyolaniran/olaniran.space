@@ -1,29 +1,55 @@
-- name: "Mobile Money ↔ Lightning On/Off Ramp"
-  stack: "Backend orchestration, Mobile Money PSPs, Lightning, ledgers"
-  period: "Flash · 2025"
-  impact: "Local-currency to Lightning settlement in under five seconds, with a zero-failed-transaction operating record on the exchange path."
-  description: "State machine for deposit, conversion, spend, and withdraw across Mobile Money and Lightning. Partner latency is treated as a first-class failure mode, not an exception."
-  links: []
+- name: "Mobile Money to Lightning exchange"
+  company: "Flash"
+  period: "2025"
+  line: "Send Mobile Money in Benin and watch it arrive as Lightning sats in seconds. I built the exchange path so a slow provider never swallows your payment."
+  links:
+    - label: "bitcoinflash.xyz"
+      url: "https://bitcoinflash.xyz"
 
-- name: "USD ACH into a Bitcoin Wallet"
-  stack: "ACH, bank adapters, Stablesats / Flash Cash, Lightning addresses"
-  period: "Flash · 2026"
-  impact: "Freelancers can receive a USD wire into a bank account that converts to spendable dollar-stable value, payable to any Lightning address."
-  description: "Backend for inbound international bank transfer, conversion, and global Lightning spend. The hard part is settlement truth across bank cutoffs and Lightning immediacy."
-  links: []
+- name: "US wires into a bitcoin wallet"
+  company: "getFlash"
+  period: "2026"
+  line: "A freelancer gets a US bank wire and spends it from a bitcoin wallet over Lightning. I built the ACH-in and bank top-up side."
+  links:
+    - label: "getflash.io"
+      url: "https://getflash.io"
 
-- name: "Partner Reconciliation and Runbooks"
-  stack: "CLI, crons, monitoring dashboard, append-only ledger diffs"
-  period: "Flash · 2026"
-  impact: "Operators can continue when partners are slow: explicit runbooks, retries, and ledger-vs-processor diffs instead of silent stuck states."
-  description: "Reconciliation jobs and dashboards for cash-out, top-up, and settle. Designed for the case where the processor, the wallet, and the bank statement disagree."
-  links: []
+- name: "Runbooks for stuck payouts"
+  company: "getFlash"
+  period: "2026"
+  line: "When the bank says one thing and our ledger says another, operators need answers. I wrote the runbooks and reconciliation jobs so a stalled payout is visible and retryable."
+  links:
+    - label: "getflash.io"
+      url: "https://getflash.io"
 
-- name: "Breezee — Lightning infrastructure for African builders"
-  stack: "Breez SDK, Lightning, open-source developer infrastructure"
-  period: "Breezee · 2025 - 2026"
-  impact: "Builders in Benin and Senegal shipped wallets and payments on infra.usebreezee.xyz during hackathons; the stack was open-sourced so others can fork the plumbing."
-  description: "Strip the friction of wiring Bitcoin/Lightning into a product: less boilerplate, fewer edge cases, more time shipping. Listed on the African Bitcoin Ecosystem Map."
+- name: "Ramper"
+  company: "Ramper"
+  period: "2026"
+  line: "My own project: pay a Lightning invoice and your family gets M-Pesa or MTN MoMo in Kenya, Tanzania, or Benin. It picks the right rail, shows fees upfront, and tells you what to do when money stalls."
   links:
     - label: "usebreezee.xyz"
-      url: "https://usebreezee.xyz"
+      url: "https://www.usebreezee.xyz"
+
+- name: "Spontaneous keysend test in LDK-Node"
+  company: "LDK — open source"
+  period: "2026"
+  line: "My merged test upstream: two regtest nodes, a keysend with custom TLV record, asserting payment success — covering spontaneous payments in the Python bindings."
+  links:
+    - label: "ldk-node#923"
+      url: "https://github.com/lightningdevkit/ldk-node/pull/923"
+
+- name: "Invoice from any Lightning address"
+  company: "Open source"
+  period: "2025"
+  line: "Paste a Lightning address or LNURL, get an invoice — published on npm as invoice-any with a get-invoice CLI. A small tool that removes one annoying step of getting paid over Lightning."
+  links:
+    - label: "npm · invoice-any"
+      url: "https://www.npmjs.com/package/invoice-any"
+
+- name: "Bitcoin Script, hands-on"
+  company: "Bitdevs Cotonou"
+  period: "2026"
+  line: "The Bitcoin Script material I teach with — contracts, timelocks, multisig, and transactions you can run yourself."
+  links:
+    - label: "bitdevs-bitcoinscript"
+      url: "https://github.com/heyolaniran/bitdevs-bitcoinscript"

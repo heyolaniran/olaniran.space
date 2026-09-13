@@ -1,0 +1,23 @@
+---
+title: "Projets : paiements Lightning, wallets bitcoin et rails que j'ai construits"
+description: "Ce que j'ai construit avec Flash, getFlash et Ramper : Mobile Money vers Lightning au Bénin, virements US vers wallet bitcoin, off-ramps vers M-Pesa et MTN MoMo."
+permalink: /fr/projects/
+lang: fr
+en_alt: /projects/
+---
+
+{% assign profile = site.data.profile_fr %}
+
+<h1>Projets</h1>
+<p class="muted">{{ profile.companies_intro }}</p>
+<p class="muted">Ma méthode : backends TypeScript et Python sur rails Lightning et Mobile Money, avec des ledgers qui se réconcilient. J'utilise l'IA pour le scaffolding et les tests — les chemins d'argent restent relus par un humain, avec runbooks rejouables et diffs de ledger.</p>
+
+<section>
+  <h2>Livré</h2>
+  {% include project_list.html items=site.data.projects_fr %}
+</section>
+
+<section>
+  <h2>Entreprises</h2>
+  {% include company_list.html items=profile.companies badge="J'y travaille actuellement" %}
+</section>

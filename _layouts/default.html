@@ -26,12 +26,14 @@
       <nav class="top-nav">
         {% assign current_lang = page.lang | default: "en" %}
         {% if current_lang == "fr" %}
-          <a href="{{ '/fr/' | relative_url }}">Accueil</a>
-          <a href="{{ '/fr/blog/' | relative_url }}">Notes</a>
+          <a href="{{ '/fr/' | relative_url }}"{% if page.url == "/fr/" %} class="is-current"{% endif %}>Accueil</a>
+          <a href="{{ '/fr/projects/' | relative_url }}"{% if page.url == "/fr/projects/" %} class="is-current"{% endif %}>Projets</a>
+          <a href="{{ '/fr/blog/' | relative_url }}"{% if page.url == "/fr/blog/" %} class="is-current"{% endif %}>Notes</a>
           <a href="{{ '/' | relative_url }}">EN</a>
         {% else %}
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/blog/' | relative_url }}">Notes</a>
+          <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} class="is-current"{% endif %}>Home</a>
+          <a href="{{ '/projects/' | relative_url }}"{% if page.url == "/projects/" %} class="is-current"{% endif %}>Projects</a>
+          <a href="{{ '/blog/' | relative_url }}"{% if page.url == "/blog/" %} class="is-current"{% endif %}>Notes</a>
           <a href="{{ '/fr/' | relative_url }}">FR</a>
         {% endif %}
       </nav>

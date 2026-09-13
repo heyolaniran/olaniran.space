@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Hash Timelocked Contract (HTLC)"
+title: "HTLCs explained: how Lightning moves money without trust"
+description: "What is a Hash Timelocked Contract? I explain how Lightning routes a payment across channels with hashes and timeouts — no need to trust middlemen."
 tags: [lightning, seminar, htlc]
 lang: en
 ---
 
-Hello everyone, welcome to my first topic in Lightning Protocol Development.
-In this topic, we will be discussing Hash Timelocked Contracts (HTLCs).
+I kept hearing "HTLC" and nodding along — until I had to explain it myself. Here is the simple version I wish someone gave me: how Lightning moves sats across people you don't trust, using a hash and a deadline.
 
 ## What is an HTLC?
 

@@ -1,0 +1,59 @@
+---
+permalink: /404.html
+title: "404 — Page not found"
+sitemap: false
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — Page not found · Olaniran Afouda</title>
+    <meta name="description" content="This page does not exist. The link is broken or the page moved." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1f4b99" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
+      })();
+    </script>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="not-found">
+        <svg class="broken-link" viewBox="0 0 240 120" role="img" aria-label="A broken chain link">
+          <g class="link-half" transform="rotate(-6 65 60)">
+            <path d="M42 38 H88 L100 50 L90 60 L100 70 L88 82 H42 A22 22 0 0 1 42 38 Z" />
+          </g>
+          <g class="link-half" transform="rotate(6 175 60)">
+            <path d="M198 38 H152 L140 50 L150 60 L140 70 L152 82 H198 A22 22 0 0 0 198 38 Z" />
+          </g>
+          <g class="link-burst">
+            <line x1="120" y1="26" x2="120" y2="40" />
+            <line x1="106" y1="82" x2="112" y2="94" />
+            <line x1="134" y1="82" x2="128" y2="94" />
+          </g>
+        </svg>
+
+        <h1>404</h1>
+        <p class="not-found-title">This link is broken.</p>
+        <p class="muted">
+          The page you are looking for does not exist or moved.
+          <br />
+          <span lang="fr">Cette page n'existe pas, ou plus.</span>
+        </p>
+        <p class="not-found-links">
+          <a href="/">Home</a> · <a href="/projects/">Projects</a> · <a href="/blog/">Notes</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
